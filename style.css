@@ -225,12 +225,4 @@ body {
         transform: rotate(0deg);
     }
 }
-
-
-@media (max-width: 768px) {
-    :root {
-        --base-size: 10.5px;
-    }
-}
-
 /* --------------------------------------------- */

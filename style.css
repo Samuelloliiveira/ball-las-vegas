@@ -1,6 +1,6 @@
 :root {
     /* Essa variável regula o tamanho */
-    --base-size: 12px;
+    --base-size: 16px;
 }
 
 * {
@@ -223,6 +223,19 @@ body {
 
     .face {
         transform: rotate(0deg);
+    }
+}
+
+
+@media (min-width: 640px) {
+    :root {
+        --base-size: 10.5px;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --base-size: 12px;
     }
 }
 /* --------------------------------------------- */

@@ -1,0 +1,236 @@
+:root {
+    /* Essa variável regula o tamanho */
+    --base-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    /* Imagem de fundo da página, não precisa para 
+    usar em outros sites */
+    background-image: url("./img/balllasvegas.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* --------------------------------------------- */
+}
+
+.body {
+    width: calc(40 * var(--base-size));
+    height: calc(25 * var(--base-size));
+    border-radius: 60% 60% 5% 5% / 85% 85% 35% 35%;
+
+    background-color: #fdd43e;
+
+    display: flex;
+    overflow: hidden;
+
+    /* CSS extra para se ajudar a imagem de funto
+        não precisa disso se for usar em outros sites
+    */
+    position: relative;
+    left: 1rem;
+    transform: rotate(2deg);
+    /* --------------------------------------------- */
+}
+
+.face {
+    width: calc(27 * var(--base-size));
+    height: calc(17 * var(--base-size));
+    border-radius: 60% 60% 5% 5% / 85% 85% 35% 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+
+    background: radial-gradient(circle at center, #ffe596, transparent 50%), #fdd43e;
+
+    /* Esse código não é necessário caso for usar na sua página */
+    transform: rotate(2deg);
+    /* --------------------------------------------- */
+}
+
+.boxWithTwoEyes {
+    display: flex;
+    gap: calc(5.5 * var(--base-size));
+    padding: calc(1 * var(--base-size));
+}
+
+.box-eyes {
+    position: relative;
+    width: calc(7.5 * var(--base-size));
+    height: calc(8.125 * var(--base-size));
+    display: flex;
+    justify-content: center;
+}
+
+.eyebrow-1,
+.eyebrow-2 {
+    position: absolute;
+    top: calc(-0.625 * var(--base-size));
+
+    width: calc(7.5 * var(--base-size));
+    height: calc(0.625 * var(--base-size));
+    border: calc(0.6 * var(--base-size)) solid black;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+
+    background-color: transparent;
+    z-index: 100;
+}
+
+.eyebrow-wow {
+    top: calc(-2 * var(--base-size));
+
+    height: calc(3.625 * var(--base-size));
+    border-radius: calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size)) 0 0;
+    border: calc(0.6 * var(--base-size)) solid black;
+    border-bottom: transparent;
+}
+
+.eye,
+.eye-1 {
+    position: absolute;
+    width: calc(7.5 * var(--base-size));
+    height: calc(7.5 * var(--base-size));
+    background-color: white;
+    clip-path: circle();
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+.iris,
+.iris-1 {
+    width: calc(3.125 * var(--base-size));
+    height: calc(3.125 * var(--base-size));
+    background-color: black;
+    clip-path: circle();
+    transition-duration: 0.5s;
+}
+
+.iris-smile {
+    width: calc(6 * var(--base-size));
+    height: calc(6 * var(--base-size));
+    position: relative;
+}
+
+.box-star,
+.box-star-1 {
+    display: none;
+}
+
+.star {
+    position: absolute;
+    top: calc(1 * var(--base-size));
+    left: calc(1 * var(--base-size));
+    width: calc(2 * var(--base-size));
+    height: calc(2 * var(--base-size));
+    clip-path: polygon(51% 0, 71% 32%, 100% 49%, 70% 73%, 52% 100%, 33% 73%, 1% 48%, 30% 33%);
+    background-color: white;
+}
+
+.star-1 {
+    position: absolute;
+    top: calc(0.5 * var(--base-size));
+    left: calc(2.5 * var(--base-size));
+    width: calc(1 * var(--base-size));
+    height: calc(1 * var(--base-size));
+    clip-path: polygon(51% 0, 71% 32%, 100% 49%, 70% 73%, 52% 100%, 33% 73%, 1% 48%, 30% 33%);
+    background-color: white;
+}
+
+.star-2 {
+    position: absolute;
+    top: calc(2.5 * var(--base-size));
+    left: calc(2.5 * var(--base-size));
+    width: calc(1 * var(--base-size));
+    height: calc(1 * var(--base-size));
+    clip-path: polygon(51% 0, 71% 32%, 100% 49%, 70% 73%, 52% 100%, 33% 73%, 1% 48%, 30% 33%);
+    background-color: white;
+}
+
+.mouth {
+    width: calc(4 * var(--base-size));
+    height: calc(2 * var(--base-size));
+    background-color: transparent;
+    border-radius: 0 0 calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size));
+    border: calc(0.6 * var(--base-size)) solid black;
+    border-top: 0;
+    transition-duration: 0.5s;
+}
+
+.mouth-u {
+    width: calc(4 * var(--base-size));
+    height: calc(2 * var(--base-size));
+    border-radius: 0 0 calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size));
+    border: calc(0.6 * var(--base-size)) solid black;
+    border-top: 0;
+}
+
+.mouth-wow {
+    height: calc(4 * var(--base-size));
+    background-color: black;
+    border-radius: calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size));
+    border: 0;
+}
+
+.mouth-smile {
+    background-color: black;
+    border-radius: 0 0 calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size));
+    border: 0;
+}
+
+.mouth-sad {
+    background-color: black;
+    border-radius: calc(3.75 * var(--base-size)) calc(3.75 * var(--base-size)) 0 0;
+    border: 0;
+}
+
+.mouth-upset {
+    background-color: black;
+    border-radius: calc(1.875 * var(--base-size)) calc(1.875 * var(--base-size)) calc(1.875 * var(--base-size)) calc(1.875 * var(--base-size));
+    border: 0;
+}
+
+/* Essse código aqui 👇 é desnecessário para usar essa ball no seu projeto */
+
+@media (max-width: 640px) {
+    :root {
+        --base-size: 9.5px;
+    }
+
+    body {
+        background-image: none;
+        background-color: black;
+    }
+
+    .body {
+        position: static;
+        transform: rotate(0deg);
+    }
+
+    .face {
+        transform: rotate(0deg);
+    }
+}
+
+
+@media (max-width: 768px) {
+    :root {
+        --base-size: 10.5px;
+    }
+}
+
+/* --------------------------------------------- */

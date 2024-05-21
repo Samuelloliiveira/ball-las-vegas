@@ -208,7 +208,7 @@ body {
 
 @media (max-width: 640px) {
     :root {
-        --base-size: 9.5px;
+        --base-size: 7.5px;
     }
 
     body {
